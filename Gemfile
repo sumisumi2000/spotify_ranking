@@ -70,4 +70,4 @@ end
 gem 'rspotify'
 
 # 環境変数
-gem 'dotenv-rails'
+gem 'dotenv-rails', groups: [:development, :test]
