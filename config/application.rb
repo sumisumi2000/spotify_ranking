@@ -28,5 +28,7 @@ module Myapp
       g.test_framework false     # test ファイルを作成しない
       g.skip_routes true         # ルーティングの記述を作成しない
     end
+    # Spotify API の認証情報を設定
+    RSpotify::authenticate(ENV['SPOTIFY_CLIENT_ID'], ENV['SPOTIFY_CLIENT_SECRET'])
   end
 end

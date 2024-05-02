@@ -7,4 +7,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root 'staticpages#top'
+
+  # Spotify 認証
+  get '/auth/spotify/callback', to: 'users#spotify'
+
+  get '/users/tracks', to: 'users#track'
 end
