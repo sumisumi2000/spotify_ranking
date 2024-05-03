@@ -11,5 +11,5 @@ Rails.application.routes.draw do
   # Spotify 認証
   get '/auth/spotify/callback', to: 'users#spotify'
 
-  get '/users/tracks', to: 'users#track'
+  get '/users/tracks/:id', to: 'users#track'
 end
