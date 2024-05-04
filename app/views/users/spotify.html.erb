@@ -1,4 +1,8 @@
 <h1>Users#spotify</h1>
 <p>Find me in app/views/user/spotify.html.erb</p>
 
-<%= link_to 'Show track', track_ranking_path(@track.id) %>
+<%= form_with url: track_ranking_path, method: :get, class: "uk-width-5-6" do |form| %>
+  <%= form.select 'term', [["1ヶ月", "short"], ["6ヶ月", "medium"], ["1年間", "long"]] %>
+  <%= form.select 'limit', (5..20).to_a %>
+  <%= form.submit '検索', class: "uk-button uk-button-primary" %>
+<% end %>
