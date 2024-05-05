@@ -1,1 +1,3 @@
-<iframe src="https://open.spotify.com/embed/<%= @kind %>/<%= @spotify_id %>?utm_source=generator" width="100%" height="200" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" class="track"></iframe>
+<div class="uk-margin-top uk-margin-bottom">
+  <iframe src="https://open.spotify.com/embed/<%= @kind %>/<%= @spotify_id %>?utm_source=generator" width="100%" height=<%= "#{ @kind == "track" ? 1 : 3}52"%> frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" class="track"></iframe>
+</div>
