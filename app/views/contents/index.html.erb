@@ -1,4 +1,7 @@
-  <%= link_to 'シェア用のページ', share_path(id: @spotify_ids, term: @term, limit: @limit, kind: @kind), class: "uk-text-large uk-text-lead uk-text-bold" %>
+<%= link_to 'シェア用のページ', share_path(id: @spotify_ids, term: @term, limit: @limit, kind: @kind), class: "uk-text-large uk-text-lead uk-text-bold" %>
+<%= link_to "https://twitter.com/intent/tweet?url=#{share_url(id: @spotify_ids, term: @term, limit: @limit, kind: @kind)}&text=%0a%0a%23My favorites are ...? %23ミニアプリウィーク%0a%0a", :onclick=>"window.open(this.href,'hoge', 'height=480, width=640');return false;", rel: "noopener noreferrer", data: { toggle: "tooltip", placement: "bottom" } do %>
+  <span uk-icon="x" class="uk-text-lead"></span>
+<% end %>
 <!-- フォーム -->
 <%= render FormComponent.new(term: @term, limit: @limit, kind: @kind) %>
 <div class="uk-margin-top" uk-scrollspy="target: > div; cls: uk-animation-fade; target: .track; delay: 200">
