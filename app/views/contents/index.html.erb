@@ -1,3 +1,4 @@
+  <%= link_to 'シェア用のページ', share_path(id: @spotify_ids, term: @term, limit: @limit, kind: @kind), class: "uk-text-large uk-text-lead uk-text-bold" %>
 <!-- フォーム -->
 <%= render FormComponent.new(term: @term, limit: @limit, kind: @kind) %>
 <div class="uk-margin-top" uk-scrollspy="target: > div; cls: uk-animation-fade; target: .track; delay: 200">
