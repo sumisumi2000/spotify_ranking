@@ -1,14 +1,5 @@
-<div class="uk-width-5-6 uk-margin-auto-left uk-margin-auto-right">
-  <div class="uk-width-1-1 uk-text-center uk-margin-top uk-margin-bottom uk-heading-divider">
-    <%= link_to "My favorites are ...?", root_path, class: "uk-text-large uk-text-lead uk-text-bold" %>
-  </div>
-  <%= form_with url: contents_path, method: :get, class: "uk-flex uk-flex-around uk-margin-auto-left uk-margin-auto-right uk-text-small" do |form| %>
-    <%= form.select 'term', [["4 weeks", "short"], ["6 months", "medium"], ["1 Year", "long"]], { selected: @term }, { class: "uk-select uk-width-2-5" } %>
-    <%= form.select 'limit', (5..20).to_a, { selected: @limit }, { class: "uk-select uk-width-1-5 uk-height-1-1" } %>
-    <%= form.select 'kind', [["楽曲", "track"], ["アーティスト", "artist"]], { selected: @kind }, { class: "uk-select uk-width-1-2" } %>
-    <%= form.submit '検索', class: "uk-button uk-button-primary uk-button-small" %>
-  <% end %>
-  <div class="uk-margin-top" uk-scrollspy="target: > div; cls: uk-animation-fade; target: .track; delay: 200">
-    <%= render(SpotifyContentComponent.with_collection(@spotify_ids, kind: @kind)) %>
-  </div>
+<!-- フォーム -->
+<%= render FormComponent.new(term: @term, limit: @limit, kind: @kind) %>
+<div class="uk-margin-top" uk-scrollspy="target: > div; cls: uk-animation-fade; target: .track; delay: 200">
+  <%= render SpotifyContentComponent.with_collection(@spotify_ids, kind: @kind) %>
 </div>

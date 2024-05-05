@@ -1,0 +1,17 @@
+<%= form_with url: contents_path, method: :get, class: "uk-margin-auto-left uk-margin-auto-right uk-text-center" do |form| %>
+  <div class="uk-flex uk-flex-around">
+    <div class="uk-flex uk-flex-column uk-width-1-3">
+      <%= form.label 'term', "期間", class: "uk-form-label" %>
+      <%= form.select 'term', [["4週間", "short"], ["6ヶ月", "medium"], ["1年間", "long"]], { selected: @term }, { class: "uk-select" } %>
+    </div>
+    <div class="uk-flex uk-flex-column uk-width-1-5">
+      <%= form.label 'limit', "取得数", class: "uk-form-label" %>
+      <%= form.select 'limit', (5..20).to_a, { selected: @limit }, { class: "uk-select" } %>
+    </div>
+    <div class="uk-flex uk-flex-column uk-width-1-2">
+      <%= form.label 'limit', "種類", class: "uk-form-label" %>
+      <%= form.select 'kind', [["楽曲", "track"], ["アーティスト", "artist"]], { selected: @kind }, { class: "uk-select" } %>
+    </div>
+  </div>
+  <%= render SubmitComponent.new(form: form) %>
+<% end %>

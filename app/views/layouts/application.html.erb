@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Myapp</title>
+    <title>My favorites are ...?</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -27,12 +27,14 @@
     </script>
     <!-- Google Analytics 終了 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=M+PLUS+1p&family=M+PLUS+Rounded+1c&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=M+PLUS+1p&family=M+PLUS+Rounded+1c&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
   </head>
 
   <body>
-    <div class="uk-width-1-1">
+    <div class="uk-width-5-6 uk-margin-auto-left uk-margin-auto-right">
+      <!-- ヘッダー -->
+      <%= render HeaderComponent.new(title: "My favorites are ...?") %>
       <%= yield %>
     </div>
   </body>
