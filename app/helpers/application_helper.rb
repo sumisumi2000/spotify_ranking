@@ -19,6 +19,8 @@ module ApplicationHelper
 
   def connect_spotify_ids(spotify_ids)
     ids = ""
+    return ids unless spotify_ids
+
     spotify_ids.each do |spotify_id|
       ids << "id%5b%5d=#{spotify_id}%26"
     end
