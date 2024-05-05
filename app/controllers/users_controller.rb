@@ -4,6 +4,6 @@ class UsersController < ApplicationController
     session[:spotify_user_id] = RSpotify::User.new(request.env['omniauth.auth']).id
 
     # ランキング画面にリダイレクト
-    render "tracks/ranking"
+    render "contents/index"
   end
 end
