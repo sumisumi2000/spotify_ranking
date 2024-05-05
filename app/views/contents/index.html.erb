@@ -19,7 +19,7 @@
 <% if @spotify_ids %>
   <!-- X シェアボタン -->
   <div class="uk-text-center uk-margin-top uk-margin-bottom">
-    <%= link_to "#{generate_share_url(@spotify_ids, @term, @limit, @kind)}&text=%0a%0a%23Myfavoritesare %23ミニアプリウィーク%0a%0a", :onclick=>"window.open(this.href,'hoge', 'height=480, width=640');return false;", rel: "noopener noreferrer", data: { toggle: "tooltip", placement: "bottom" }, class: "uk-text-lead" do %>
+    <%= link_to "#{generate_share_url(@spotify_ids, @term, @limit, @kind)}&text=私のお気に入りはこれ！%0a%0a%23Myfavoritesare %23ミニアプリウィーク%0a%0a", :onclick=>"window.open(this.href,'hoge', 'height=480, width=640');return false;", rel: "noopener noreferrer", data: { toggle: "tooltip", placement: "bottom", turbo: false }, class: "uk-text-lead" do %>
       <p class="uk-button uk-button-secondary uk-button-large"><span uk-icon="x"></span> でシェア</p>
     <% end %>
   </div>
