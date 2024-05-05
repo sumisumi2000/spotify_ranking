@@ -74,3 +74,5 @@ gem 'dotenv-rails', groups: [:development, :test]
 
 # OmniAuth で POST メソッドの認証に必要？
 gem "omniauth-rails_csrf_protection"
+
+gem 'view_component'
