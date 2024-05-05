@@ -1,19 +1,26 @@
 <!-- フォーム -->
 <%= render FormComponent.new(term: @term, limit: @limit, kind: @kind) %>
-<!-- 説明文 -->
+
+<!-- 認証後のページでは表示しない -->
 <% if @spotify_ids %>
+  <!-- 説明文 -->
   <p class="uk-text-large uk-text-center">
     <%= "直近#{translate_term(@term)}の#{translate_kind(@kind)}トップ #{@limit}"%>
   </p>
 <% end %>
+
 <!-- 楽曲 or アーティスト -->
 <div class="uk-margin-top" uk-scrollspy="target: > div; cls: uk-animation-fade; target: .track; delay: 200">
   <%= render SpotifyContentComponent.with_collection(@spotify_ids, kind: @kind) %>
 </div>
 <div class="uk-text-center uk-margin-top uk-margin-bottom">
 
-<div class="uk-text-center uk-margin-top uk-margin-bottom">
-  <%= link_to "#{generate_share_url(@spotify_ids, @term, @limit, @kind)}&text=%0a%0a%23Myfavoritesare %23ミニアプリウィーク%0a%0a", :onclick=>"window.open(this.href,'hoge', 'height=480, width=640');return false;", rel: "noopener noreferrer", data: { toggle: "tooltip", placement: "bottom" }, class: "uk-text-lead" do %>
-    <p class="uk-button uk-button-secondary uk-button-large"><span uk-icon="x"></span> でシェア</p>
-  <% end %>
-</div>
+<!-- 認証後のページでは表示しない -->
+<% if @spotify_ids %>
+  <!-- X シェアボタン -->
+  <div class="uk-text-center uk-margin-top uk-margin-bottom">
+    <%= link_to "#{generate_share_url(@spotify_ids, @term, @limit, @kind)}&text=%0a%0a%23Myfavoritesare %23ミニアプリウィーク%0a%0a", :onclick=>"window.open(this.href,'hoge', 'height=480, width=640');return false;", rel: "noopener noreferrer", data: { toggle: "tooltip", placement: "bottom" }, class: "uk-text-lead" do %>
+      <p class="uk-button uk-button-secondary uk-button-large"><span uk-icon="x"></span> でシェア</p>
+    <% end %>
+  </div>
+<% end %>
