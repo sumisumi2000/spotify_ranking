@@ -30,5 +30,8 @@ module Myapp
     end
     # Spotify API の認証情報を設定
     RSpotify::authenticate(ENV["SPOTIFY_CLIENT_ID"], ENV["SPOTIFY_CLIENT_SECRET"])
+
+    # ViewComponent で常にディレクトリを生成
+    config.view_component.generate.sidecar = true
   end
 end
