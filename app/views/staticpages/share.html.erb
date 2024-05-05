@@ -1,5 +1,5 @@
 <p class="uk-text-large">
-  <%= "直近 #{@term}の#{translate_kind(@kind)}トップ #{@limit}"%>
+  <%= "直近#{@term}の#{translate_kind(@kind)}トップ #{@limit}"%>
 </p>
 <div class="uk-margin-top" uk-scrollspy="target: > div; cls: uk-animation-fade; target: .track; delay: 200">
   <%= render SpotifyContentComponent.with_collection(@spotify_ids, kind: @kind) %>

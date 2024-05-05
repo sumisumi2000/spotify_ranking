@@ -1,5 +1,11 @@
 <!-- フォーム -->
 <%= render FormComponent.new(term: @term, limit: @limit, kind: @kind) %>
+<!-- 説明文 -->
+<% if @spotify_ids %>
+  <p class="uk-text-large uk-text-center">
+    <%= "直近#{translate_term(@term)}の#{translate_kind(@kind)}トップ #{@limit}"%>
+  </p>
+<% end %>
 <!-- 楽曲 or アーティスト -->
 <div class="uk-margin-top" uk-scrollspy="target: > div; cls: uk-animation-fade; target: .track; delay: 200">
   <%= render SpotifyContentComponent.with_collection(@spotify_ids, kind: @kind) %>
