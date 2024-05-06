@@ -3,4 +3,12 @@
   <%= image_tag 'top.png', size: 500 %>
   <p>あなたの Spotify でのお気に入りは、、？</p>
   <%= button_to 'Spotify で認証', '/auth/spotify', method: :post, data: { turbo: false }, class: "uk-button uk-button-secondary uk-button-large uk-text-capitalize" %>
+  <div class="uk-text-large uk-text-bold uk-text-danger uk-margin-top">
+    <p>おそらく認証に失敗します</p>
+    <p>なのでトップページしかないアプリです</p>
+    <p>これからは公式ドキュメントもっとちゃんと読みます</p>
+  </div>
+  <p class="uk-text-bold uk-text-large uk-text-secondary uk-margin-remove-bottom">アプリイメージ（開発者のお気に入りたち）</p>
+  <%= link_to '楽曲', 'https://light-myrah-sumisumi2000.koyeb.app/share?id[]=1vdORH38tFKtznyJ4AxZ84&id[]=2PeCrMLUayMPZnLZPkJxOJ&id[]=0UWTRBGWfOp709f6rxd63R&id[]=5Anr2wqdL182BsI02iCbcd&id[]=3BeBtbNobvKN4EemfHfKcy&id[]=7d66NXUtZmUpHKYMgk9Q77&id[]=6wpeOeOBNYy6tOcTcL7dRk&id[]=1e2AlxRp9MDpFsPh1HqT3E&id[]=0tY2EdfrJYjs9cTyglVmaq&id[]=7tGDXCPLpAScEwmqab9YZd&id[]=6mJIn3fvwWHHAnrR3LEdxp&id[]=5eY7692tmgHB9dbmq6wa2M&id[]=6DJufb1am2ldhryvhP3dpC&id[]=0YTM7bCx451c6LQbkddy4Q&id[]=406ZlqOP9nLQxJFBY7d9S4&id[]=54SWXjFN2XYo3G5YiNSCqd&id[]=2kuTXMJcOuIgZGc73kP5Is&id[]=5fnZAPIZZbyM0Az0VBYbB4&id[]=22gtn4nnFWGA79uvtP6TqD&id[]=2cxcqKwQtfKq7giphxjzOu&kind=track&limit=20&term=long', class: "uk-margin-right uk-margin-left" %>
+  <%= link_to 'アーティスト', 'https://light-myrah-sumisumi2000.koyeb.app/share?id[]=4QvgGvpgzgyUOo8Yp8LDm9&id[]=0bAsR2unSRpn6BQPEnNlZm&id[]=6mEQK9m2krja6X1cfsAjfl&id[]=4UK2Lzi6fBfUi9rpDt6cik&id[]=1snhtMLeb2DYoMOcVbb8iB&id[]=5Vo1hnCRmCM6M4thZCInCj&id[]=38WbKH6oKAZskBhqDFA8Uj&id[]=2nvl0N9GwyX69RRBMEZ4OD&id[]=5kVZa4lFUmAQlBogl1fkd6&id[]=7i9bNUSGORP5MIgrii3cJc&id[]=64tJ2EAv1R6UaZqc4iOCyj&id[]=5k3NfhEeZHpouIGDpjKOPo&id[]=4WqXqPmUuenMIr4QaFrZXN&id[]=1XYuC1vxinTjHCNd5clB8C&id[]=1EowJ1WwkMzkCkRomFhui7&id[]=4DDoAL8n6ob19r3jOZEbJI&id[]=6le80R1opKnTlP4o3KvA2k&id[]=0ySFZq3Wd0SQUyJUzmJAeb&id[]=0ixzjrK1wkN2zWBXt3VW3W&id[]=7LTiBdByoaUd329wCpmMcM&kind=artist&limit=20&term=long', class: "uk-margin-right uk-margin-left" %>
 </div>
