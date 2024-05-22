@@ -2,7 +2,7 @@
   <p>あなたのお気に入りのアーティストや楽曲を発掘しにいこう</p>
   <%= image_tag 'top.png', size: 500 %>
   <p>あなたの Spotify でのお気に入りは、、？</p>
-  <%= button_to 'Spotify で認証', '/auth/spotify', method: :post, data: { turbo: false }, class: "uk-button uk-button-secondary uk-button-large uk-text-capitalize" %>
+  <%= button_to 'Spotify で認証', '/auth/spotify', data: { turbo: false }, class: "uk-button uk-button-secondary uk-button-large uk-text-capitalize" %>
   <div class="uk-text-large uk-text-bold uk-text-danger uk-margin-top">
     <p>おそらく認証に失敗します</p>
     <p>なのでトップページしかないアプリです</p>
